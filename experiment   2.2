@@ -1,0 +1,34 @@
+clc
+clear
+H=syslin("d",[45.76+6*%s+2*%s^2],[23.28+3.1*%s+%s^2+3.796*%s^3])
+disp(H, 'The given transfer function H =' )
+[z,p,k]=tf2zp(H)
+disp(z, 'The obtained zeros for the given transfer function z = ');
+disp(p, 'The obtained poles for the given transfer function p = ');
+disp(k, 'The obtained system gain for the given transfer function k = ');
+
+
+o/p
+
+The given transfer function H =
+
+                       2       
+        45.76 + 6z + 2z        
+   --------------------------  
+                   2        3  
+   23.28 + 3.1z + z + 3.796z   
+
+ The obtained zeros for the given transfer function z = 
+
+  -1.5 + 4.542026i
+  -1.5 - 4.542026i
+
+ The obtained poles for the given transfer function p = 
+
+  -1.7664798  
+   0.7515223 + 1.7049813i
+   0.7515223 - 1.7049813i
+
+ The obtained system gain for the given transfer function k = 
+
+   0.5268704
