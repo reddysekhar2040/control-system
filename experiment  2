@@ -1,0 +1,36 @@
+clc;
+clear;
+Z=[2;1];P=[0;-3-%i;-3+%i];K=2.5;
+disp(Z,'Enter the zeros Z = ') 
+disp(P,'Enter the poles = ')
+disp(K,'Enter the system gain K = ')
+S=zp2tf(Z,P,K,"c")
+roots(S.num)
+disp(S, 'The obtained transfer function S =')
+
+
+o/p
+
+ 
+ Enter the zeros Z = 
+
+   2.
+   1.
+
+ Enter the poles = 
+
+   0.  
+  -3. - i
+  -3. + i  
+
+ Enter the system gain K = 
+
+   2.5
+
+ The obtained transfer function S =
+
+                  2  
+   5 - 7.5s + 2.5s   
+   ----------------  
+            2   3    
+    10s + 6s + s     
